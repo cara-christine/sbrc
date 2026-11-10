@@ -65,7 +65,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .slide{animation:slide linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
 }
 @media (max-width:1100px) and (min-width:861px){.pkg{grid-column:span 6 !important}}
-@media (max-width:860px){.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
+@media (max-width:860px){.mainnav{flex-wrap:nowrap !important;overflow-x:auto;padding:4px 16px !important;gap:20px !important;scrollbar-width:none}.mainnav::-webkit-scrollbar{display:none}.mainnav a{white-space:nowrap;padding:8px 0 !important}.navcta{order:-1}.strip{display:none}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
 @media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
 .rule{position:relative;border-top:1px solid #2B2B2B}
 @supports (animation-timeline: view()){
@@ -102,13 +102,13 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 
 <!-- NAV -->
 <header style="position: sticky; top: 0; z-index: 5; background: #0C0C0C; border-bottom: 1px solid #2B2B2B">
-<nav aria-label="Main" style="padding: 12px 48px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400">
+<nav class="mainnav" aria-label="Main" style="padding: 12px 48px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400">
 <a href="#about" class="ul" style="padding: 8px 0">About</a>
 <a href="#approach" class="ul" style="padding: 8px 0">Approach</a>
 <a href="#services" class="ul" style="padding: 8px 0">Services</a>
 <a href="#fit" class="ul" style="padding: 8px 0">Is it for you</a>
 <a href="#contact" class="ul" style="padding: 8px 0">Contact</a>
-<a href="#contact" class="ul" style="padding: 8px 0; color: #FF2E93">Book a call</a>
+<a href="#contact" class="ul navcta" style="padding: 8px 0; color: #FF2E93">Book a call</a>
 </nav>
 </header>
 
@@ -142,35 +142,35 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <polygon points="200,109 240,132 240,178 200,201 160,178 160,132" stroke="#FFD60A"></polygon>
 <polygon points="80,178 120,201 120,247 80,270 40,247 40,201"></polygon>
 <polygon points="40,109 80,132 80,178 40,201 0,178 0,132"></polygon>
-<polygon points="0,178 40,201 40,247 0,270 -40,247 -40,201" opacity="1.0"></polygon>
-<polygon points="40,247 80,270 80,316 40,339 0,316 0,270" opacity="0.94"></polygon>
-<polygon points="120,247 160,270 160,316 120,339 80,316 80,270" opacity="0.94"></polygon>
-<polygon points="0,316 40,339 40,385 0,408 -40,385 -40,339" opacity="0.87"></polygon>
-<polygon points="80,316 120,339 120,385 80,408 40,385 40,339" opacity="0.87"></polygon>
-<polygon points="40,385 80,408 80,454 40,477 0,454 0,408" opacity="0.81"></polygon>
-<polygon points="120,385 160,408 160,454 120,477 80,454 80,408" opacity="0.81"></polygon>
-<polygon points="0,454 40,477 40,523 0,546 -40,523 -40,477" opacity="0.75"></polygon>
-<polygon points="80,454 120,477 120,523 80,546 40,523 40,477" opacity="0.75"></polygon>
-<polygon points="40,523 80,546 80,592 40,615 0,592 0,546" opacity="0.68"></polygon>
-<polygon points="120,523 160,546 160,592 120,615 80,592 80,546" opacity="0.68"></polygon>
-<polygon points="0,592 40,615 40,661 0,684 -40,661 -40,615" opacity="0.62"></polygon>
-<polygon points="80,592 120,615 120,661 80,684 40,661 40,615" opacity="0.62"></polygon>
-<polygon points="40,661 80,684 80,730 40,753 0,730 0,684" opacity="0.56"></polygon>
-<polygon points="120,661 160,684 160,730 120,753 80,730 80,684" opacity="0.56"></polygon>
-<polygon points="0,730 40,753 40,799 0,822 -40,799 -40,753" opacity="0.49"></polygon>
-<polygon points="80,730 120,753 120,799 80,822 40,799 40,753" opacity="0.49"></polygon>
-<polygon points="40,799 80,822 80,868 40,891 0,868 0,822" opacity="0.43"></polygon>
-<polygon points="120,799 160,822 160,868 120,891 80,868 80,822" opacity="0.43"></polygon>
-<polygon points="0,868 40,891 40,937 0,960 -40,937 -40,891" opacity="0.37"></polygon>
-<polygon points="80,868 120,891 120,937 80,960 40,937 40,891" opacity="0.37"></polygon>
-<polygon points="40,937 80,960 80,1006 40,1029 0,1006 0,960" opacity="0.3"></polygon>
-<polygon points="120,937 160,960 160,1006 120,1029 80,1006 80,960" opacity="0.3"></polygon>
-<polygon points="0,1006 40,1029 40,1075 0,1098 -40,1075 -40,1029" opacity="0.24"></polygon>
-<polygon points="80,1006 120,1029 120,1075 80,1098 40,1075 40,1029" opacity="0.24"></polygon>
-<polygon points="40,1075 80,1098 80,1144 40,1167 0,1144 0,1098" opacity="0.18"></polygon>
-<polygon points="120,1075 160,1098 160,1144 120,1167 80,1144 80,1098" opacity="0.18"></polygon>
-<polygon points="0,1144 40,1167 40,1213 0,1236 -40,1213 -40,1167" opacity="0.11"></polygon>
-<polygon points="80,1144 120,1167 120,1213 80,1236 40,1213 40,1167" opacity="0.11"></polygon>
+<polygon class="strip" points="0,178 40,201 40,247 0,270 -40,247 -40,201" opacity="1.0"></polygon>
+<polygon class="strip" points="40,247 80,270 80,316 40,339 0,316 0,270" opacity="0.94"></polygon>
+<polygon class="strip" points="120,247 160,270 160,316 120,339 80,316 80,270" opacity="0.94"></polygon>
+<polygon class="strip" points="0,316 40,339 40,385 0,408 -40,385 -40,339" opacity="0.87"></polygon>
+<polygon class="strip" points="80,316 120,339 120,385 80,408 40,385 40,339" opacity="0.87"></polygon>
+<polygon class="strip" points="40,385 80,408 80,454 40,477 0,454 0,408" opacity="0.81"></polygon>
+<polygon class="strip" points="120,385 160,408 160,454 120,477 80,454 80,408" opacity="0.81"></polygon>
+<polygon class="strip" points="0,454 40,477 40,523 0,546 -40,523 -40,477" opacity="0.75"></polygon>
+<polygon class="strip" points="80,454 120,477 120,523 80,546 40,523 40,477" opacity="0.75"></polygon>
+<polygon class="strip" points="40,523 80,546 80,592 40,615 0,592 0,546" opacity="0.68"></polygon>
+<polygon class="strip" points="120,523 160,546 160,592 120,615 80,592 80,546" opacity="0.68"></polygon>
+<polygon class="strip" points="0,592 40,615 40,661 0,684 -40,661 -40,615" opacity="0.62"></polygon>
+<polygon class="strip" points="80,592 120,615 120,661 80,684 40,661 40,615" opacity="0.62"></polygon>
+<polygon class="strip" points="40,661 80,684 80,730 40,753 0,730 0,684" opacity="0.56"></polygon>
+<polygon class="strip" points="120,661 160,684 160,730 120,753 80,730 80,684" opacity="0.56"></polygon>
+<polygon class="strip" points="0,730 40,753 40,799 0,822 -40,799 -40,753" opacity="0.49"></polygon>
+<polygon class="strip" points="80,730 120,753 120,799 80,822 40,799 40,753" opacity="0.49"></polygon>
+<polygon class="strip" points="40,799 80,822 80,868 40,891 0,868 0,822" opacity="0.43"></polygon>
+<polygon class="strip" points="120,799 160,822 160,868 120,891 80,868 80,822" opacity="0.43"></polygon>
+<polygon class="strip" points="0,868 40,891 40,937 0,960 -40,937 -40,891" opacity="0.37"></polygon>
+<polygon class="strip" points="80,868 120,891 120,937 80,960 40,937 40,891" opacity="0.37"></polygon>
+<polygon class="strip" points="40,937 80,960 80,1006 40,1029 0,1006 0,960" opacity="0.3"></polygon>
+<polygon class="strip" points="120,937 160,960 160,1006 120,1029 80,1006 80,960" opacity="0.3"></polygon>
+<polygon class="strip" points="0,1006 40,1029 40,1075 0,1098 -40,1075 -40,1029" opacity="0.24"></polygon>
+<polygon class="strip" points="80,1006 120,1029 120,1075 80,1098 40,1075 40,1029" opacity="0.24"></polygon>
+<polygon class="strip" points="40,1075 80,1098 80,1144 40,1167 0,1144 0,1098" opacity="0.18"></polygon>
+<polygon class="strip" points="120,1075 160,1098 160,1144 120,1167 80,1144 80,1098" opacity="0.18"></polygon>
+<polygon class="strip" points="0,1144 40,1167 40,1213 0,1236 -40,1213 -40,1167" opacity="0.11"></polygon>
+<polygon class="strip" points="80,1144 120,1167 120,1213 80,1236 40,1213 40,1167" opacity="0.11"></polygon>
 </g>
 <path d="M200 160 C 240 175, 270 215, 300 200 S 345 165, 333 151" fill="none" stroke="#F5F3EF" stroke-width="0.8" stroke-dasharray="1 6" stroke-linecap="round"></path>
 </svg>
@@ -198,7 +198,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div class="intro-text hero-copy" style="position: relative; top: 8vh; text-align: center; max-width: 420px; padding: 0 24px; margin-right: 42%">
 <h1 style="margin: 0; font-weight: 400; font-size: 0.9375rem; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase">I help you understand what you want, ask for it clearly and explore it safely, with</h1>
 <p style="margin: -4px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.25rem; line-height: 1; color: #FF2E93">curiosity &amp; care</p>
-<a href="#about" class="ul" style="display: inline-block; margin-top: 28px; padding-bottom: 4px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFD60A; background-size: 100% 1px">Explore</a>
+<a href="#about" class="ul" style="display: inline-block; margin-top: 18px; padding: 12px 0 4px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFD60A; background-size: 100% 1px">Explore</a>
 <p style="margin: 40px 0 0; text-align: center; font-size: 0.75rem; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: #CFCBC6">Behaviorist &amp; coach<br>Based in the Northeast<br>Available to travel</p>
 </div>
 </div>
