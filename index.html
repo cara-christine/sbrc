@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&amp;family=Mrs+Saint+Delafield&amp;display=swap" rel="stylesheet">
 <script>
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('opening');if('scrollRestoration' in history)history.scrollRestoration='manual';}
 try{if(sessionStorage.getItem('sbrc-18')!=='yes')document.documentElement.classList.add('gate')}catch(e){document.documentElement.classList.add('gate')}
 </script>
 <style>
@@ -40,7 +41,7 @@ input,select,textarea,button{font:inherit}
 .hero-photo{--po:.7;opacity:var(--po);animation:photoin 1.4s ease 5s both;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 55%);mask-image:linear-gradient(to right,transparent 0,#000 55%)}
 .age{display:none}
 html.gate .age{display:flex}
-html.gate body{overflow:hidden}
+html.gate body,html.opening,html.opening body{overflow:hidden}
 html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html.gate .corner-art{animation-play-state:paused}
 .age button{cursor:pointer;border:1px solid #F5F3EF;background:none;color:#F5F3EF;padding:14px 24px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
 .age button:hover,.age button:focus-visible{background:#FFD60A;border-color:#FFD60A;color:#0C0C0C;outline:none}
@@ -143,7 +144,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </svg>
 </div>
 <img class="hero-photo" src="images/hero.jpg" alt="Black and white photo of a person in a black dress, a riding crop resting against one thigh" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; height: 100%; object-fit: cover; object-position: 50% 35%">
-<svg class="hide-sm" viewBox="0 0 184 650" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" style="position: absolute; top: 0; right: 24px; width: 180px; height: 100%; z-index: 1; pointer-events: none">
+<svg class="hide-sm" viewBox="0 0 184 650" preserveAspectRatio="xMinYMin slice" aria-hidden="true" style="position: absolute; top: 0; left: 24px; width: 180px; height: 100%; z-index: 1; pointer-events: none">
 <g fill="none" stroke-width="1">
 <polygon points="26.0,0.0 48.5,13.0 48.5,39.0 26.0,52.0 3.5,39.0 3.5,13.0" stroke="#F5F3EF" opacity="0.28"></polygon>
 <polygon points="116.1,0.0 138.6,13.0 138.6,39.0 116.1,52.0 93.5,39.0 93.5,13.0" stroke="#F5F3EF" opacity="0.16"></polygon>
@@ -401,6 +402,14 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 
 </div>
 <script>
+function unlockWhenOpen(){
+  var root=document.documentElement; if(!root.classList.contains('opening')) return;
+  window.scrollTo(0,0);
+  var done=function(){root.classList.remove('opening')};
+  var intro=document.querySelector('.intro');
+  if(intro) intro.addEventListener('animationend',function(e){if(e.animationName==='open')done()});
+  setTimeout(done,7000);
+}
 function startFlight(){
   var svg=document.getElementById('fly-svg'); if(!svg) return;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -416,12 +425,13 @@ function startFlight(){
 }
 (function(){
   var root=document.documentElement;
-  if(!root.classList.contains('gate')){startFlight();return;}
+  if(!root.classList.contains('gate')){unlockWhenOpen();startFlight();return;}
   var yes=document.getElementById('age-yes');
   yes.focus();
   yes.addEventListener('click',function(){
     try{sessionStorage.setItem('sbrc-18','yes')}catch(e){}
     root.classList.remove('gate');
+    unlockWhenOpen();
     startFlight();
   });
   document.getElementById('age-no').addEventListener('click',function(){
