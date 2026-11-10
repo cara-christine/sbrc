@@ -84,6 +84,8 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .reveal.hexin{animation:rise linear both,hexin linear both;animation-timeline:view(),view();animation-range:entry 0% cover 28%,entry 20% cover 45%}
 .slide.hexin{animation:slide linear both,hexin linear both;animation-timeline:view(),view();animation-range:cover 0% cover 100%,entry 0% cover 40%}
 }
+footer>:not(.foot-comb){position:relative}
+@media (max-width:860px){.foot-comb{width:220px !important;right:-40px !important}}
 @media (prefers-reduced-motion:reduce){.hexin{animation:none !important;clip-path:none}}
 @media (max-width:860px){.bigword .slide{font-size:12vw !important;animation-name:none,hexin !important}}
 </style>
@@ -283,7 +285,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div class="g12 rule" style="padding-top: 16px; row-gap: 40px">
 <p style="grid-column: 1 / span 3; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>What clients bring</p>
 <div style="grid-column: 4 / span 9">
-<p style="margin: 0 0 40px; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.25rem; line-height: 1">Nothing too basic, <span style="color: #FF2E93">nothing too niche.</span></p>
+<p style="margin: 0 0 40px; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.25rem; line-height: 1">Nothing too basic,<br><span style="color: #FF2E93">nothing too niche.</span></p>
 <ul style="margin: 0; padding: 0; list-style: none; columns: 2 280px; column-gap: 48px; color: #CFCBC6">
 <li style="break-inside: avoid; padding: 12px 0; border-bottom: 1px solid #222222">Am I into this? And what do I do next?</li>
 <li style="break-inside: avoid; padding: 12px 0; border-bottom: 1px solid #222222">Telling a partner about a fetish, feet included</li>
@@ -410,7 +412,8 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </section>
 
 <!-- FOOTER -->
-<footer style="padding: 0 48px 32px; overflow: hidden">
+<footer style="position: relative; padding: 0 48px 32px; overflow: hidden">
+<svg class="foot-comb" viewBox="0 0 320 300" aria-hidden="true" style="position: absolute; right: -30px; top: -20px; width: 360px; height: auto; pointer-events: none"><g fill="none" stroke="#F5F3EF" stroke-width="0.8" opacity="0.1"><polygon points="60,4 100,27 100,73 60,96 20,73 20,27"></polygon><polygon points="140,4 180,27 180,73 140,96 100,73 100,27"></polygon><polygon points="220,4 260,27 260,73 220,96 180,73 180,27"></polygon><polygon points="100,73 140,96 140,142 100,165 60,142 60,96"></polygon><polygon points="180,73 220,96 220,142 180,165 140,142 140,96"></polygon><polygon points="260,73 300,96 300,142 260,165 220,142 220,96"></polygon><polygon points="140,142 180,165 180,211 140,234 100,211 100,165"></polygon><polygon points="220,142 260,165 260,211 220,234 180,211 180,165"></polygon><polygon points="180,211 220,234 220,280 180,303 140,280 140,234"></polygon><polygon points="260,211 300,234 300,280 260,303 220,280 220,234"></polygon></g></svg>
 <p aria-hidden="true" style="margin: 0; font-weight: 700; font-size: clamp(3.5rem, 11vw, 11rem); line-height: 0.9; letter-spacing: -0.03em; color: #1F1F1F; text-transform: lowercase; white-space: nowrap">sbrc</p>
 <div style="margin-top: 24px; border-top: 1px solid #2B2B2B; padding-top: 16px; display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: space-between; font-size: 0.75rem; color: #9A9A9A">
 <p style="margin: 0; max-width: 46rem">Coaching and education only. Not therapy, counseling or medical care. Adults 18+. In crisis? Call or text 988 (US).</p>
