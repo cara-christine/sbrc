@@ -1,6 +1,6 @@
-# SBRC
+# SRBC
 
-Website for SBRC, kink and sexuality coaching with Sutton.
+Website for SRBC, kink and sexuality coaching with Sutton.
 
 A static, single-page site. Open `index.html` in a browser to view it.
 
