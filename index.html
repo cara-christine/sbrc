@@ -47,6 +47,8 @@ input,select,textarea,button{font:inherit}
 .fly{animation:gone .6s ease 4s both}
 .fly-reveal{stroke-dasharray:1 1;stroke-dashoffset:1}
 .fly-reveal.go{animation:trail 3s linear both}
+@keyframes artin{from{opacity:0}to{opacity:1}}
+.corner-art{animation:artin 1.2s ease 5s both}
 @keyframes photoin{from{opacity:0}to{opacity:var(--po)}}
 .hero-photo{--po:.7;opacity:var(--po);animation:photoin 1.4s ease 5s both;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 55%);mask-image:linear-gradient(to right,transparent 0,#000 55%)}
 .age{display:none}
@@ -66,13 +68,13 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 }
 @media (max-width:1100px) and (min-width:861px){.pkg{grid-column:span 6 !important}}
 @media (max-width:860px){.trio{grid-template-columns:1fr !important}section h2,section h3,section li{text-align:center}section ul{padding-left:0 !important;list-style-position:inside}section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
-@media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo,.corner-art{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
 .rule{position:relative;border-top:1px solid #2B2B2B}
 @supports (animation-timeline: view()){
 @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes tint{from{background:#FF2E93}to{background:#2B2B2B}}
+@keyframes tint{from{background:rgba(255,46,147,.6)}to{background:#2B2B2B}}
 .rule{border-top-color:transparent;view-timeline-name:--rule}
-.rule::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;transform-origin:left;background:#FF2E93;animation:draw linear both,tint linear both;animation-timeline:--rule,--rule;animation-range:entry 0% entry 75%,exit 0% exit 15%}
+.rule::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;transform-origin:left;background:rgba(255,46,147,.6);animation:draw linear both,tint linear both;animation-timeline:--rule,--rule;animation-range:entry 0% entry 75%,exit 0% exit 15%}
 .rule>p:first-child{animation:rise linear both;animation-timeline:--rule;animation-range:entry 45% entry 90%}
 }
 @media (prefers-reduced-motion:reduce){.rule{border-top-color:#2B2B2B}.rule::before{display:none}.rule>p:first-child{animation:none}}
