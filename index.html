@@ -49,6 +49,7 @@ input,select,textarea,button{font:inherit}
 .fly-reveal.go{animation:trail 3s linear both}
 @keyframes artin{from{opacity:0}to{opacity:1}}
 .corner-art{animation:artin 1.2s ease 5s both}
+.scroll-bee .bee-pos{transform:translate(230px,178px) scale(-1.17,1.17) translate(-49px,-27.5px)}
 @keyframes photoin{from{opacity:0}to{opacity:var(--po)}}
 .hero-photo{--po:.7;opacity:var(--po);animation:photoin 1.4s ease 5s both;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 55%);mask-image:linear-gradient(to right,transparent 0,#000 55%)}
 .age{display:none}
@@ -67,7 +68,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .slide{animation:slide linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
 }
 @media (max-width:1100px) and (min-width:861px){.pkg{grid-column:span 6 !important}}
-@media (max-width:860px){.trio{grid-template-columns:1fr !important}section h2,section h3,section li{text-align:center}section ul{padding-left:0 !important;list-style-position:inside}section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important;max-width:440px !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
+@media (max-width:860px){.trio{grid-template-columns:1fr !important}section h2,section h3,section li{text-align:center}section ul{padding-left:0 !important;list-style-position:inside}section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important;max-width:440px !important}.hero-logo{top:20px !important;right:20px !important;width:170px !important}.scroll-bee .trail-lg{display:none}.scroll-bee .trail-sm{display:inline !important}.scroll-bee .bee-pos{transform:translate(130px,185px) scale(-1.17,1.17) translate(-49px,-27.5px)}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
 @media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo,.corner-art{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
 .rule{position:relative;border-top:1px solid #2B2B2B}
 @supports (animation-timeline: view()){
@@ -146,8 +147,8 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </svg>
 </div>
 <div class="intro" style="position: absolute; inset: 0; background: #0C0C0C; display: flex; align-items: center; justify-content: center; overflow: hidden">
-<div class="corner-art" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 0; height: 0">
-<svg viewBox="0 0 320 320" aria-hidden="true" style="position: absolute; left: -60px; top: -40px; width: 380px; height: auto; overflow: visible">
+<div class="corner-art" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 0; height: 0">
+<svg viewBox="0 0 320 320" aria-hidden="true" style="position: absolute; left: -60px; bottom: -70px; width: 380px; height: auto; overflow: visible; transform: scaleY(-1)">
 <g fill="none" stroke="#F5F3EF" stroke-width="0.8" opacity="0.75">
 <polygon points="80,40 120,63 120,109 80,132 40,109 40,63"></polygon>
 <polygon points="160,40 200,63 200,109 160,132 120,109 120,63"></polygon>
@@ -185,10 +186,12 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <polygon class="strip" points="0,1144 40,1167 40,1213 0,1236 -40,1213 -40,1167" opacity="0.11"></polygon>
 <polygon class="strip" points="80,1144 120,1167 120,1213 80,1236 40,1213 40,1167" opacity="0.11"></polygon>
 </g>
-<path d="M200 160 C 240 175, 270 215, 300 200 S 345 165, 333 151" fill="none" stroke="#F5F3EF" stroke-width="0.8" stroke-dasharray="1 6" stroke-linecap="round"></path>
 </svg>
-<svg viewBox="0 0 60 50" aria-hidden="true" style="position: absolute; left: 270px; top: 110px; width: 70px; height: auto; overflow: visible">
+<svg class="scroll-bee" viewBox="0 0 300 260" aria-hidden="true" style="position: absolute; left: 150px; top: -230px; width: 300px; height: 260px; overflow: visible">
 <defs><clipPath id="bee-body"><ellipse cx="28" cy="27" rx="14.5" ry="10.5"></ellipse></clipPath></defs>
+<path class="trail-sm" d="M58 72 C 92 34, 150 34, 152 78 C 154 116, 102 120, 110 88 C 118 56, 172 66, 168 112 C 165 148, 108 150, 108 172 C 108 182, 116 185, 128 185" fill="none" stroke="#F5F3EF" stroke-width="0.9" stroke-dasharray="1 6" stroke-linecap="round" style="display: none"></path>
+<path class="trail-lg" d="M58 72 C 92 34, 150 34, 152 78 C 154 116, 102 120, 110 88 C 118 56, 176 64, 186 108 C 194 142, 160 152, 176 176 C 186 186, 208 178, 228 178" fill="none" stroke="#F5F3EF" stroke-width="0.9" stroke-dasharray="1 6" stroke-linecap="round"></path>
+<g class="bee-pos">
 <g class="bee">
 <ellipse cx="22" cy="10" rx="7" ry="11" transform="rotate(-22 22 10)" fill="#0C0C0C" stroke="#F5F3EF" stroke-width="1"></ellipse>
 <ellipse cx="32" cy="9" rx="6" ry="9.5" transform="rotate(18 32 9)" fill="#0C0C0C" stroke="#F5F3EF" stroke-width="1"></ellipse>
@@ -200,6 +203,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <circle cx="3" cy="10" r="1.5" fill="#FF2E93"></circle><circle cx="12" cy="7" r="1.5" fill="#FF2E93"></circle>
 <path d="M43 26 L49 27.5 L43 29.5" fill="none" stroke="#F5F3EF" stroke-width="1" stroke-linejoin="round"></path>
 </g>
+</g>
 </svg>
 </div>
 <img class="hero-photo" src="images/hero.jpg" alt="Black and white photo of a person in a black dress, a riding crop resting against one thigh" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; height: 100%; object-fit: cover; object-position: 50% 35%">
@@ -208,7 +212,8 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div style="height: 1px; margin-top: 3px; background: #FFD60A"></div>
 <div style="height: 1px; margin-top: 10px; background: #F5F3EF"></div>
 </div>
-<div class="intro-text hero-copy" style="position: relative; top: 8vh; text-align: center; max-width: min(540px, 38vw); padding: 0 24px; margin-right: 42%">
+<img class="intro-text hero-logo" src="logo/srbc-logo-dark-nobg.svg" alt="srbc" width="739" height="345" style="position: absolute; top: 28px; right: 48px; z-index: 2; width: clamp(240px, 26vw, 400px); height: auto">
+<div class="intro-text hero-copy" style="position: relative; top: -60px; text-align: center; max-width: min(540px, 38vw); padding: 0 24px; margin-right: 42%">
 <h1 style="margin: 0; font-weight: 400; font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase">I help you understand what you want, ask for it clearly and explore it safely, with</h1>
 <p style="margin: -4px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3.25rem, 4.6vw, 4.25rem); line-height: 1; color: #FF2E93">curiosity &amp; care</p>
 <a href="#about" class="ul" style="display: inline-block; margin-top: 18px; padding: 12px 0 4px; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFD60A; background-size: 100% 1px">Explore</a>
@@ -259,7 +264,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div>
 <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1">The whole hive,</p>
 <p style="margin: -6px 0 0 64px; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1; color: #FF2E93">not just the bee</p>
-<p style="margin: 28px 0 0; max-width: 30rem; color: #CFCBC6">Most advice stops at "just communicate." Working with a behaviorist means looking at everything around a behavior, then changing what makes the outcome you want more likely.</p>
+<p style="margin: 28px 0 0; color: #CFCBC6">Most advice stops at "just communicate." Working with a behaviorist means looking at everything around a behavior, then changing what makes the outcome you want more likely.</p>
 </div>
 <div class="trio" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px">
 <div class="reveal">
@@ -412,8 +417,8 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 
 <!-- FOOTER -->
 <footer style="position: relative; padding: 0 48px 32px; overflow: hidden">
-<p aria-hidden="true" style="margin: 0; font-weight: 700; font-size: clamp(3.5rem, 11vw, 11rem); line-height: 0.9; letter-spacing: -0.03em; color: #1F1F1F; text-transform: lowercase; white-space: nowrap">srbc</p>
-<div class="foot-line" style="position: relative; margin-top: 24px; border-top: 1px solid #2B2B2B; padding-top: 16px; display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: space-between; font-size: 0.75rem; color: #9A9A9A">
+<p aria-hidden="true" style="margin: 0; line-height: 0"><img src="logo/srbc-logo-dark-nobg.svg" alt="" width="739" height="345" style="width: clamp(160px, 26vw, 420px); height: auto; opacity: 0.1"></p>
+<div class="foot-line" style="position: relative; margin-top: 0; border-top: 1px solid #2B2B2B; padding-top: 16px; display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: space-between; font-size: 0.75rem; color: #9A9A9A">
 <p style="margin: 0; max-width: 46rem">Coaching and education only. Not therapy, counseling or medical care. Adults 18+. In crisis? Call or text 988 (US).</p>
 <p style="margin: 0">© 2026 SRBC</p>
 </div>
