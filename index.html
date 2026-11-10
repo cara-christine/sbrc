@@ -67,7 +67,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .slide{animation:slide linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
 }
 @media (max-width:1100px) and (min-width:861px){.pkg{grid-column:span 6 !important}}
-@media (max-width:860px){.trio{grid-template-columns:1fr !important}section h2,section h3,section li{text-align:center}section ul{padding-left:0 !important;list-style-position:inside}section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
+@media (max-width:860px){.trio{grid-template-columns:1fr !important}section h2,section h3,section li{text-align:center}section ul{padding-left:0 !important;list-style-position:inside}section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important;max-width:440px !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
 @media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo,.corner-art{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
 .rule{position:relative;border-top:1px solid #2B2B2B}
 @supports (animation-timeline: view()){
@@ -208,11 +208,11 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div style="height: 1px; margin-top: 3px; background: #FFD60A"></div>
 <div style="height: 1px; margin-top: 10px; background: #F5F3EF"></div>
 </div>
-<div class="intro-text hero-copy" style="position: relative; top: 8vh; text-align: center; max-width: 420px; padding: 0 24px; margin-right: 42%">
-<h1 style="margin: 0; font-weight: 400; font-size: 0.9375rem; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase">I help you understand what you want, ask for it clearly and explore it safely, with</h1>
-<p style="margin: -4px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.25rem; line-height: 1; color: #FF2E93">curiosity &amp; care</p>
-<a href="#about" class="ul" style="display: inline-block; margin-top: 18px; padding: 12px 0 4px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFD60A; background-size: 100% 1px">Explore</a>
-<p style="margin: 40px 0 0; text-align: center; font-size: 0.75rem; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: #CFCBC6">Behaviorist &amp; coach<br>Based in the Northeast<br>Available to travel</p>
+<div class="intro-text hero-copy" style="position: relative; top: 8vh; text-align: center; max-width: min(540px, 38vw); padding: 0 24px; margin-right: 42%">
+<h1 style="margin: 0; font-weight: 400; font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase">I help you understand what you want, ask for it clearly and explore it safely, with</h1>
+<p style="margin: -4px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3.25rem, 4.6vw, 4.25rem); line-height: 1; color: #FF2E93">curiosity &amp; care</p>
+<a href="#about" class="ul" style="display: inline-block; margin-top: 18px; padding: 12px 0 4px; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFD60A; background-size: 100% 1px">Explore</a>
+<p style="margin: 40px 0 0; text-align: center; font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: #CFCBC6">Behaviorist &amp; coach<br>Based in the Northeast<br>Available to travel</p>
 </div>
 </div>
 </section>
@@ -232,15 +232,15 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <section id="about" style="padding: 0 48px 140px">
 <div class="g12 rule" style="padding-top: 16px">
 <p style="grid-column: 1 / span 3; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>About me</p>
-<div class="reveal hexin" style="grid-column: 6 / span 3; margin-top: 8px; aspect-ratio: 3 / 3.7; background: #1A1A1A; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Portrait, black &amp; white]</div>
 </div>
-<div class="g12" style="margin-top: 24px">
-<p style="grid-column: 6 / span 6; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 4rem; line-height: 1">Hi, I'm Sutton!</p>
-<p style="grid-column: 3 / span 8; margin: -8px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1; color: #FF2E93">Your curiosity is welcome here.</p>
+<div class="g12" style="margin-top: 24px; align-items: center; row-gap: 28px">
+<div class="reveal hexin" style="grid-column: 2 / span 4; margin-top: 8px; aspect-ratio: 3 / 3.7; background: #1A1A1A; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Portrait, black &amp; white]</div>
+<div style="grid-column: 6 / span 7">
+<p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 4rem; line-height: 1">Hi, I'm S!</p>
+<p style="margin: -8px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1; color: #FF2E93; text-wrap: pretty">Your curiosity is welcome&nbsp;here.</p>
+<p class="reveal" style="margin: 32px 0 0; max-width: 36rem; color: #CFCBC6">My background is in the study of behavior: why we do what we do, and what makes it more or less likely to happen again. My other education came from more than ten years in the kink and fetish community, including years as a professional dominatrix.</p>
+<p class="reveal" style="margin: 24px 0 0; max-width: 36rem; color: #CFCBC6">People often came to me certain they wanted one thing and discovered they needed something else. Language for their desires. Confidence to name them. Someone who would not flinch. That is the work I do now, with more structure and the same absence of judgment.</p>
 </div>
-<div class="g12" style="margin-top: 40px; row-gap: 24px">
-<p class="reveal" style="grid-column: 6 / span 3; margin: 0; color: #CFCBC6">My background is in the study of behavior: why we do what we do, and what makes it more or less likely to happen again. My other education came from more than ten years in the kink and fetish community, including years as a professional dominatrix.</p>
-<p class="reveal" style="grid-column: 9 / span 3; margin: 0; color: #CFCBC6">People often came to me certain they wanted one thing and discovered they needed something else. Language for their desires. Confidence to name them. Someone who would not flinch. That is the work I do now, with more structure and the same absence of judgment.</p>
 </div>
 </section>
 
@@ -282,7 +282,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <!-- TOPICS -->
 <section style="padding: 0 48px 140px">
 <div class="g12 rule" style="padding-top: 16px; row-gap: 40px">
-<p style="grid-column: 1 / span 3; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>What clients bring</p>
+<p style="grid-column: 1 / span 12; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>What clients bring</p>
 <div style="grid-column: 4 / span 9">
 <p style="margin: 0 0 40px; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.25rem; line-height: 1">Nothing too basic,<br><span style="color: #FF2E93">nothing too niche.</span></p>
 <ul style="margin: 0; padding: 0; list-style: none; columns: 2 280px; column-gap: 48px; color: #CFCBC6">
@@ -350,7 +350,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <!-- FIT -->
 <section id="fit" style="padding: 0 48px 140px">
 <div class="g12 rule" style="padding-top: 16px; row-gap: 40px">
-<p style="grid-column: 1 / span 3; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>Is it for you</p>
+<p style="grid-column: 1 / span 12; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>Is it for you</p>
 <div class="reveal" style="grid-column: 4 / span 4">
 <h3 style="margin: 0 0 18px; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD60A">This is for you if</h3>
 <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; color: #CFCBC6">

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<rect width="100%" height="100%" fill="#0C0C0C"/>
+<polygon points="256,36 446.53,146 446.53,366 256,476 65.47,366 65.47,146" fill="none" stroke="#FFD60A" stroke-width="10" stroke-linejoin="round"/>
+<g transform="translate(123.88 163) scale(5.5)"><defs><clipPath id="bee-body"><ellipse cx="28" cy="27" rx="14.5" ry="10.5"/></clipPath></defs>
+<g fill="#0C0C0C" stroke="#F5F3EF" stroke-width="1.8" stroke-linejoin="round">
+<ellipse cx="22" cy="10" rx="7" ry="11" transform="rotate(-22 22 10)"/>
+<ellipse cx="32" cy="9" rx="6" ry="9.5" transform="rotate(18 32 9)"/>
+<ellipse cx="28" cy="27" rx="15" ry="11"/>
+<path clip-path="url(#bee-body)" d="M24 15 Q 21 27 24 39 M31 15 Q 28 27 31 39" fill="none" stroke="#FFD60A" stroke-width="2.2"/>
+<circle cx="12" cy="26" r="7"/>
+<circle cx="10" cy="25" r="1.1" fill="#F5F3EF" stroke="none"/>
+<path d="M11 19 Q 8 12 3 10 M14 19 Q 15 12 12 7" fill="none" stroke-linecap="round" stroke-width="1.62"/>
+<circle cx="3" cy="10" r="1.5" fill="#FF2E93" stroke="none"/><circle cx="12" cy="7" r="1.5" fill="#FF2E93" stroke="none"/>
+<path d="M43 26 L49 27.5 L43 29.5" fill="none"/>
+</g></g>
+</svg>
