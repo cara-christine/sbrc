@@ -76,6 +76,13 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .rule>p:first-child{animation:rise linear both;animation-timeline:--rule;animation-range:entry 45% entry 90%}
 }
 @media (prefers-reduced-motion:reduce){.rule{border-top-color:#2B2B2B}.rule::before{display:none}.rule>p:first-child{animation:none}}
+@supports (animation-timeline: view()){
+@keyframes hexin{from{clip-path:polygon(50% 38%,58% 44%,58% 56%,50% 62%,42% 56%,42% 44%)}to{clip-path:polygon(50% -90%,190% -20%,190% 120%,50% 190%,-90% 120%,-90% -20%)}}
+.hexin{animation:hexin linear both;animation-timeline:view();animation-range:entry 20% cover 45%}
+.reveal.hexin{animation:rise linear both,hexin linear both;animation-timeline:view(),view();animation-range:entry 0% cover 28%,entry 20% cover 45%}
+.slide.hexin{animation:slide linear both,hexin linear both;animation-timeline:view(),view();animation-range:cover 0% cover 100%,entry 0% cover 40%}
+}
+@media (prefers-reduced-motion:reduce){.hexin{animation:none !important;clip-path:none}}
 </style>
 </head>
 <body>
@@ -212,7 +219,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <section id="about" style="padding: 0 48px 140px">
 <div class="g12 rule" style="padding-top: 16px">
 <p style="grid-column: 1 / span 3; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#F5F3EF" stroke-width="1.5"></polygon></svg>About me</p>
-<div class="reveal" style="grid-column: 6 / span 3; margin-top: 8px; aspect-ratio: 3 / 3.7; background: #1A1A1A; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Portrait, black &amp; white]</div>
+<div class="reveal hexin" style="grid-column: 6 / span 3; margin-top: 8px; aspect-ratio: 3 / 3.7; background: #1A1A1A; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Portrait, black &amp; white]</div>
 </div>
 <div class="g12" style="margin-top: 24px">
 <p style="grid-column: 6 / span 6; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 4rem; line-height: 1">Hi, I'm Sutton!</p>
@@ -226,7 +233,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 
 <!-- BIG WORD -->
 <div aria-hidden="true" style="position: relative; padding: 40px 0 120px; overflow: hidden">
-<p class="slide" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Curiously</p>
+<p class="slide hexin" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Curiously</p>
 <p style="position: absolute; left: 52%; top: 55%; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; color: #FFD60A; transform: rotate(-6deg)">about you</p>
 </div>
 
@@ -234,7 +241,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <section id="approach" style="padding: 0 48px 140px">
 <div class="g12 rule" style="padding-top: 16px; row-gap: 48px">
 <p style="grid-column: 1 / span 12; margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: right"><svg viewBox="0 0 40 46" aria-hidden="true" style="width: 22px; height: auto; vertical-align: -6px; margin-right: 12px"><polygon points="20,1 39,12 39,34 20,45 1,34 1,12" fill="none" stroke="#FFD60A" stroke-width="1.5"></polygon></svg>My approach</p>
-<div class="reveal hide-sm" style="grid-column: 1 / span 5; aspect-ratio: 5 / 4; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Detail photo]</div>
+<div class="reveal hexin hide-sm" style="grid-column: 1 / span 5; aspect-ratio: 5 / 4; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Detail photo]</div>
 <div style="grid-column: 7 / span 6; display: flex; flex-direction: column; justify-content: space-between; gap: 48px">
 <div>
 <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1">The whole hive,</p>
@@ -292,28 +299,28 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 <div class="g12" style="margin-top: 56px; row-gap: 56px; align-items: stretch">
 
 <a href="#contact" class="card pkg reveal" style="grid-column: span 3; display: flex; flex-direction: column; text-decoration: none; color: #F5F3EF">
-<div style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
+<div class="hexin" style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border: 1px solid #2B2B2B; border-top: 0"><span>Exploration call</span><span class="arrow" aria-hidden="true" style="color: #FF2E93">↗</span></div>
 <p style="margin: 18px 0 6px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD60A">[Length] · [Price or complimentary]</p>
 <p style="margin: 0; color: #CFCBC6">Not sure what you need? Most people aren't. Many arrive asking for one thing and realize they want something else. This call finds the real question.</p>
 </a>
 
 <a href="#contact" class="card pkg reveal" style="grid-column: span 3; display: flex; flex-direction: column; text-decoration: none; color: #F5F3EF">
-<div style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
+<div class="hexin" style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border: 1px solid #2B2B2B; border-top: 0"><span>Single consult</span><span class="arrow" aria-hidden="true" style="color: #FF2E93">↗</span></div>
 <p style="margin: 18px 0 6px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD60A">One session · [Price]</p>
 <p style="margin: 0; color: #CFCBC6">For the curious who aren't sure where to begin: guidance and resources on power dynamics, naming your interests, finding community, and sexual health and safer play.</p>
 </a>
 
 <a href="#contact" class="card pkg reveal" style="grid-column: span 3; display: flex; flex-direction: column; text-decoration: none; color: #F5F3EF">
-<div style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
+<div class="hexin" style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border: 1px solid #2B2B2B; border-top: 0"><span>Exploration package</span><span class="arrow" aria-hidden="true" style="color: #FF2E93">↗</span></div>
 <p style="margin: 18px 0 6px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD60A">Two to three sessions · [Price]</p>
 <p style="margin: 0; color: #CFCBC6">An intake, then a plan with tools and methods shaped around you. For couples learning a new skill, holding boundaries with confidence, applying power dynamics or reconnecting with your erotic power.</p>
 </a>
 
 <a href="#contact" class="card pkg reveal" style="grid-column: span 3; display: flex; flex-direction: column; text-decoration: none; color: #F5F3EF">
-<div style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
+<div class="hexin" style="overflow: hidden; aspect-ratio: 4 / 5; background: #1A1A1A"><div class="img" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #6E6E6E; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase">[Photo]</div></div>
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border: 1px solid #2B2B2B; border-top: 0"><span>Groups &amp; events</span><span class="arrow" aria-hidden="true" style="color: #FF2E93">↗</span></div>
 <p style="margin: 18px 0 6px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD60A">Girls' nights · Parties · Kink 101 · [Price]</p>
 <p style="margin: 0; color: #CFCBC6">A frank, lighthearted and genuinely informative evening for your group. Bring every question you've been too shy to ask.</p>
@@ -323,7 +330,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 
 <!-- BIG WORD 2 -->
 <div aria-hidden="true" style="position: relative; padding: 20px 0 120px; overflow: hidden">
-<p class="slide" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Consensual</p>
+<p class="slide hexin" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Consensual</p>
 <p style="position: absolute; left: 22%; top: 50%; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; color: #FF2E93; transform: rotate(-5deg)">always</p>
 </div>
 
