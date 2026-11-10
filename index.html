@@ -65,7 +65,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 .slide{animation:slide linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
 }
 @media (max-width:1100px) and (min-width:861px){.pkg{grid-column:span 6 !important}}
-@media (max-width:860px){section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
+@media (max-width:860px){section:not(#top){padding-bottom:72px !important}.bigword{padding:0 0 64px !important;margin-top:-24px}section,footer{padding-left:20px !important;padding-right:20px !important}section p,footer p{text-align:center !important;margin-left:auto !important;margin-right:auto !important}.lbl{justify-content:center;padding-top:0 !important}.mbar{display:flex !important}.mainnav{display:none !important;position:absolute;top:100%;left:0;right:0;background:#0C0C0C;border-bottom:1px solid #2B2B2B;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 24px 20px !important}header.open .mainnav{display:flex !important}.mainnav a{font-size:.875rem;padding:14px 0 !important;border-bottom:1px solid #1F1F1F}.navcta{display:none}.strip{display:none;visibility:hidden}.hero-photo{width:100% !important;--po:.35;-webkit-mask-image:none;mask-image:none}.hero-copy{margin-right:0 !important}.g12>*{grid-column:1/-1 !important}.hide-sm{display:none !important}}
 @media (prefers-reduced-motion:reduce){.fly{display:none}.hero-photo{animation:none}.intro,.intro-text,.bee,.reveal,.slide{animation:none}html{scroll-behavior:auto}}
 .rule{position:relative;border-top:1px solid #2B2B2B}
 @supports (animation-timeline: view()){
@@ -232,7 +232,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </div>
 <div class="g12" style="margin-top: 24px">
 <p style="grid-column: 6 / span 6; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 4rem; line-height: 1">Hi, I'm Sutton!</p>
-<p style="grid-column: 3 / span 8; margin: -8px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1; color: #FF2E93">And your curiosity is welcome here.</p>
+<p style="grid-column: 3 / span 8; margin: -8px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 3.5rem; line-height: 1; color: #FF2E93">Your curiosity is welcome here.</p>
 </div>
 <div class="g12" style="margin-top: 40px; row-gap: 24px">
 <p class="reveal" style="grid-column: 6 / span 3; margin: 0; color: #CFCBC6">My background is in the study of behavior: why we do what we do, and what makes it more or less likely to happen again. My other education came from more than ten years in the kink and fetish community, including years as a professional dominatrix.</p>
@@ -241,7 +241,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </section>
 
 <!-- BIG WORD -->
-<div aria-hidden="true" style="position: relative; padding: 40px 0 120px; overflow: hidden">
+<div class="bigword" aria-hidden="true" style="position: relative; padding: 40px 0 120px; overflow: hidden">
 <p class="slide hexin" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Curiously</p>
 <p style="position: absolute; left: 52%; top: 55%; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; color: #FFD60A; transform: rotate(-6deg)">about you</p>
 </div>
@@ -338,7 +338,7 @@ html.gate .intro,html.gate .intro-text,html.gate .fly,html.gate .hero-photo,html
 </section>
 
 <!-- BIG WORD 2 -->
-<div aria-hidden="true" style="position: relative; padding: 20px 0 120px; overflow: hidden">
+<div class="bigword" aria-hidden="true" style="position: relative; padding: 20px 0 120px; overflow: hidden">
 <p class="slide hexin" style="margin: 0; white-space: nowrap; font-weight: 700; font-size: clamp(5rem, 15vw, 15rem); line-height: 0.85; letter-spacing: -0.02em; color: #1F1F1F; text-transform: uppercase; text-align: center">Consensual</p>
 <p style="position: absolute; left: 22%; top: 50%; margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; color: #FF2E93; transform: rotate(-5deg)">always</p>
 </div>
